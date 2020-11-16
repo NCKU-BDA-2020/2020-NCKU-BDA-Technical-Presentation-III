@@ -1,0 +1,20 @@
+{% extends  "base.html" %}
+{% block title%} 資料檢視 {% endblock %}
+{% block content %}
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<p>{{msg}}</p>
+			{% endfor %}
+		{% endif %}
+	<table>
+		<thead><tr><th>姓名&nbsp;&nbsp;</th><th>教室&nbsp;&nbsp;</th><th>體溫是否超過37.5度&nbsp;&nbsp;</th><th>填答時間&nbsp;&nbsp;</th></tr></thead>
+		<tbody>
+	{% endwith %}
+			{% for i in info %}
+				<tr><td>{{i.name}}</td><td>{{i.classroom}}</td><td>{{i.temperature}}</td><td>{{i.date_time.strftime("%Y/%m/%d, %H:%M:%S")}}</td></tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock%}

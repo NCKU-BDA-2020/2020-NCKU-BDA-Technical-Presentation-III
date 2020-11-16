@@ -1,0 +1,18 @@
+{% extends  "base.html" %}
+{% block title%}登錄{% endblock %}
+{% block content %}
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<p>{{msg}}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	<form action="#" method="post">
+		<p>姓名:</p>
+		<p><input type="text" name="name"></p>
+		<p>教室:</p>
+		<p><input type="text" name="classroom"></p>
+		<p><input type="submit" name="submit"></p>
+	</form>
+{% endblock%}

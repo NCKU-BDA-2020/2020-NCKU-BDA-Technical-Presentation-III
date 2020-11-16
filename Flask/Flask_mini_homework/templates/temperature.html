@@ -1,0 +1,26 @@
+{% extends  "base.html" %}
+{% block title%} 身體情況調查 {% endblock %}
+{% block content %}
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<p>{{msg}}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	<p>名字為 {{name}} 且填答的教室為 {{classroom}}。若有錯誤，則需登出後重新輸入。</p>
+	<p>	Your temperature is above 37.5 Celsius?</p>
+	<form action="#", method = "post">
+	    <div class="form-check">
+	      <label class="form-check-label" for="radio1">
+	        <input type="radio" class="form-check-input" id="radio1" name="choice" value="yes" checked>Yes
+	      </label>
+	    </div>
+	    <div class="form-check">
+	      <label class="form-check-label" for="radio2">
+	        <input type="radio" class="form-check-input" id="radio2" name="choice" value="no">No
+	      </label>
+	    </div>
+	    <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+	  </form>
+{% endblock%}
