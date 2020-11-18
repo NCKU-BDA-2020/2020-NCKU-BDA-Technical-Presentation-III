@@ -1,0 +1,37 @@
+<!-- /templates/my-form.html-->
+
+<html>
+    <body>
+        <form action="/form-handler" method="POST">
+            <div>
+				<label for="Name">Name:</label><br>
+                <input type="text" name="name"><br>
+            </div>
+            <div>
+				<label for="Gender">Gender:</label><br>
+                <input type="text" name="gender"><br>
+            </div>
+			<div>
+				<label for="caption">Please choose one:</label><br>
+				<input type="radio" id="Daliao Station" name="Station" value="Daliao Station">
+				<label for="Daliao Station">Daliao Station</label><br>
+				<input type="radio" id="Siaogang Station" name="Station" value="Siaogang Station">
+				<label for="Siaogang Station">Siaogang Station</label><br>
+				<input type="radio" id="Renwu Station" name="Station" value="Renwu Station">
+				<label for="Renwu Station">Renwu Station</label>
+            </div>
+            <input type="submit" value="Submit">
+          </form>
+    </body>
+
+    <!-- minimal styling -->
+    <style>
+        form {
+            margin: 2%;
+        }
+
+        div {
+            margin: 2% 0;
+        }
+    </style>
+</html>

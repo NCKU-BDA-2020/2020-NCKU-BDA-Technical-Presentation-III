@@ -48,6 +48,8 @@ def sign_in_fun():
 		flash("登錄成功！！")
 		return redirect(url_for("temperature_fun"))
 	else:
+		if "name" in session:
+			return redirect(url_for("temperature_fun"))
 		return render_template("sign_in.html")
 
 @app.route("/temperature", methods=["POST", "GET"])

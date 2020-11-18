@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def stat_if():
-    return render_template('if statement.html', name='Song Song Hao', gender='male')
+    return render_template('if statement.html', name='Song Song Hao', gender='Male')
 
 if __name__ == "__main__":
     app.run(debug=True)
